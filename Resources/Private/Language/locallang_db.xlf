@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-01-21T11:48:25Z" product-name="cix_contactperson">
+		<header/>
+		<body>
+			<trans-unit id="tabs.cixcategory" xml:space="preserve">
+				<source>Contact Person System</source>
+			</trans-unit>
+			<trans-unit id="category.cix_keywords" xml:space="preserve">
+				<source>Keywords</source>
+			</trans-unit>
+			<trans-unit id="category.cix_zips" xml:space="preserve">
+				<source>List of zips</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

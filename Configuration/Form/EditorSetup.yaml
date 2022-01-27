@@ -1,0 +1,33 @@
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          formEditor:
+            translationFiles:
+              147511400: 'EXT:cix_contactperson/Resources/Private/Language/Database.xlf'
+          formElementsDefinition:
+            Form:
+              formEditor:
+                editors:
+                  900:
+                    selectOptions:
+                      1475114552:
+                        value: 'CixContactperson'
+                        label: 'formEditor.elements.Form.finisher.CixContactPerson.editor.header.label'
+                propertyCollections:
+                  finishers:
+                    1475114552:
+                      identifier: 'CixContactperson'
+                      editors:
+                        __inheritances:
+                          10: 'TYPO3.CMS.Form.mixins.formElementMixins.BaseCollectionEditorsMixin'
+                        100:
+                          label: 'formEditor.elements.Form.finisher.CixContactPerson.editor.header.label'
+          finishersDefinition:
+            FormToDatabase:
+              formEditor:
+                iconIdentifier: 't3-form-icon-finisher'
+                label: 'formEditor.elements.Form.finisher.CixContactPerson.editor.header.label'
+                predefinedDefaults:
+                  options: []

@@ -1,0 +1,65 @@
+<div class="card">
+    <div class="row g-0">
+        <div class="col-md-4 border-end">
+            <f:if condition="{address.image}">
+                <f:then><f:image class="img-fluid rounded-start" image="{address.image.0}" alt="{address.name}" /></f:then>
+            </f:if>
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <p>
+                    <strong>{address.name}</strong><br />
+                    {address.address}<br />
+                    {address.zip} {address.city}
+                </p>
+
+
+                <div class="accordion" id="accordionCatZips">
+                    <f:for each="{address.categories}" as="category">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingCat-{category.uid}">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCat-{category.uid}" aria-expanded="true" aria-controls="collapseCat-{category.uid}">
+                                    {category.title}
+                                </button>
+                            </h2>
+                            <div id="collapseCat-{category.uid}" class="accordion-collapse collapse" aria-labelledby="headingCat-{category.uid}" data-bs-parent="#accordionCatZips">
+                                <div class="accordion-body">
+                                    <f:format.nl2br>{cixZips.{category.uid}}</f:format.nl2br>
+                                </div>
+                            </div>
+                        </div>
+                    </f:for>
+                </div>
+            </div>
+
+            <ul class="small list-group list-group-flush border-top">
+                <f:if condition="{address.email}">
+                    <li class="list-group-item">
+                        <f:if condition="{settings.form.id} != ''">
+                            <f:then>
+                                <f:link.action action="details" arguments="{address: address.uid}" class="small">{address.email}</f:link.action>
+                            </f:then>
+                            <f:else>
+                                <f:link.email class="small" email="{address.email}" />
+                            </f:else>
+                        </f:if>
+                    </li>
+                </f:if>
+                <f:if condition="{address.phone}">
+                    <li class="list-group-item">
+                        <f:link.external class="small" uri="{address.phone}" defaultScheme="tel:">
+                            {address.phone}
+                        </f:link.external>
+                    </li>
+                </f:if>
+                <f:if condition="{address.mobile}">
+                    <li class="list-group-item">
+                        <f:link.external class="small" uri="{address.mobile}" defaultScheme="tel:">
+                            {address.mobile}
+                        </f:link.external>
+                    </li>
+                </f:if>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <f:render partial="Entry" arguments="{address: address, cixZips: cixZips, cixKeywords: cixKeywords}" />
+        </div>
+
+        <div class="col-6">
+            <formvh:render
+                persistenceIdentifier="{settings.form.id}"
+                overrideConfiguration="{
+                    renderingOptions: {
+                        controllerAction: 'perform',
+                        additionalParams: {
+                            'tx_cixcontactperson_search[address]': address
+                        }
+                    },
+                    renderables: {
+                        0: {
+                            renderables: {
+                                0: {
+                                    defaultValue: address.uid
+                                }
+                            }
+                        }
+                    }
+                }"
+            />
+        </div>
+    </div>
+</div>
+
+

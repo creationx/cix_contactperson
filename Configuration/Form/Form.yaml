@@ -1,0 +1,8 @@
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          finishersDefinition:
+            CixContactperson:
+              implementationClassName: 'Creationx\CixContactperson\Domain\Finishers\FormFinisher'

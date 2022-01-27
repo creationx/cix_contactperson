@@ -1,0 +1,48 @@
+{
+    "name": "creationx/cix-contactperson",
+    "type": "typo3-cms-extension",
+    "description": "TYPO3 Contact Person System with Radius search and Search by Categories and Keywords",
+    "authors": [
+        {
+            "name": "Martin Hesse",
+            "role": "Developer"
+        }
+    ],
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "typo3/cms-core": "^10.4",
+        "friendsoftypo3/tt-address": "^5.3 || ^6.0"
+    },
+    "require-dev": {
+        "typo3/testing-framework": "^6.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Creationx\\CixContactperson\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Creationx\\CixContactperson\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "typo3-ter/cix-contactperson": "self.version"
+    },
+    "config": {
+        "vendor-dir": ".Build/vendor",
+        "bin-dir": ".Build/bin"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "TYPO3\\TestingFramework\\Composer\\ExtensionTestEnvironment::prepare"
+        ]
+    },
+    "extra": {
+        "typo3/cms": {
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "web-dir": ".Build/public",
+            "extension-key": "cix_contactperson"
+        }
+    }
+}

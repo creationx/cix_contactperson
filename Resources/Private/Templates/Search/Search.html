@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+
+<div class="mt-5">
+    <f:form method="post" controller="Search" action="search" name="search" pageUid="{settings.detailPid}">
+        <div class="input-group">
+            <span class="input-group-text">{settings.form.searchbar}</span>
+            <f:form.textfield property="keyword" class="form-control" value="{search}" />
+            <f:if condition="{settings.category} == 'radius'">
+                <f:form.select class="form-control" name="radius" options="{10: '10 km', 30: '30 km', 100: '100 km'}" value="{radius}" />
+            </f:if>
+            <div class="input-group-append">
+                <f:form.submit value="{settings.form.okay}" class="btn btn-success" />
+            </div>
+        </div>
+    </f:form>
+
+
+    <f:if condition="{results}">
+        <f:then>
+            <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+                <f:for each="{results}" as="res" key="resKey">
+                    <div class="col">
+                        <f:render partial="Entry" arguments="{address: res, cixZips: cixZips, cixKeywords: cixKeywords, key: resKey}" />
+                    </div>
+                </f:for>
+            </div>
+
+        </f:then>
+
+        <f:else>
+            <p>{settings.results.empty}</p>
+        </f:else>
+    </f:if>
+</div>
+
+</html>
+

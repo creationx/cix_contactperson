@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-01-21T09:27:00Z" product-name="cix_contactperson">
+		<header/>
+		<body>
+			<trans-unit id="select_area">
+				<source>Contact Person System</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

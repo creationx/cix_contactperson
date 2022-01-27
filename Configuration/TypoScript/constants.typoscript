@@ -1,0 +1,33 @@
+plugin.tx_cixcontactperson_search {
+    view {
+        # cat=plugin.tx_cixcontactperson_search/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:cix_contactperson/Resources/Private/Templates/
+        # cat=plugin.tx_cixcontactperson_search/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:cix_contactperson/Resources/Private/Partials/
+        # cat=plugin.tx_cixcontactperson_search/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:cix_contactperson/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_cixcontactperson_search//a; type=string; label=Default storage PID
+        storagePid =
+    }
+
+    settings {
+        # cat=plugin.tx_cixcontactperson_search//a; type=options[radius,category]; label=Set the search mode which should be used
+        mode =
+
+        # cat=plugin.tx_cixcontactperson_search//a; type=string; label=Label for the Searchbar
+        form.searchbar = Your Zip
+        # cat=plugin.tx_cixcontactperson_search//a; type=string; label=Label for the Submit Button
+        form.okay = Okay
+        # cat=plugin.tx_cixcontactperson_search//a; type=string; label=Label for the Toggle Zips Button
+        entry.buttonZips = Toggle Zips
+        # cat=plugin.tx_cixcontactperson_search//a; type=string; label=Label for the Toggle Keywords Button
+        entry.buttonKeywords = Toggle Keywords
+
+        # cat=plugin.tx_cixcontactperson_search//a; type=string; label=Text when no results found
+        results.empty = There a no results.
+        # cat=plugin.tx_cixcontactperson_search//a; type=string; label=Form Identifier
+        form.id =
+    }
+}

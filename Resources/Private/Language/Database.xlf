@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="EXT:cix_contactperson/Resources/Private/Language/Database.xlf" date="2016-08-21T20:15:32Z" product-name="form">
+        <header/>
+        <body>
+            <trans-unit id="formEditor.elements.Form.finisher.CixContactPerson.editor.header.label" resname="formEditor.elements.Form.finisher.CixContactPerson.editor.header.label" xml:space="preserve">
+                <source>Contact Person System</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
