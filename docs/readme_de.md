@@ -6,12 +6,12 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/CREATIONX/15)
 
 
-Introduction
+Was macht `cix_contactperson`
 ============
+Mit dieser Erweiterung kannst du eine Art "Kontakt"-Suche realisieren.
+Die Erweiterung basiert auf tt_address und stellt quasi eine konfigurierbare Suche bereit. Du kannst wählen zwischen einer Umkreissuche (basierend auf den Adressdaten von tt_address) und einer allgemeinen Suche nach frei definierbaren Schlüsselwörter.
 
-With this TYPO3 Extension you can setup a Contact Person Search for your Company or your Client.
-The Search is based upon a Keyword Search or a radial Search based on the Zip Code (only Germany).
-
-Configuration
+Installation
 =============
 
+Du kannst die Extension entweder über den TYPO3 Extension Manager installieren, suche einfach nach "cix_contactperson" und installiere diese wie du gewohnt bist.
